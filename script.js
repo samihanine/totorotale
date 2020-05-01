@@ -17,6 +17,7 @@ imgt.src = 'Image/Sprite/test.png';
 
 var sound = {
   mus : new Howl({src: 'Son/musique.mp3'}),
+  emus : true,
 
   atk : new Howl({src: 'Son/snd_laz.wav'}),
   deg : new Howl({src: 'Son/snd_damage.wav'}),
@@ -380,9 +381,9 @@ function iniFight() {
 
 function uptdateFight() {
 
-  if (!sound.mus.playing()) {
+  if (!sound.mus.playing() && sound.emus == true) {
     sound.mus.play();
-    sound.mus.volume(0.6);
+    sound.mus.volume(0.5);
   }
 
   //iu
@@ -661,10 +662,11 @@ function uptdateFight() {
 function keyFight(){
 
   if (event.keyCode == 77) {
-    if (sound.mus.paused) {
-      sound.mus.play();
-    } else {
+    if (sound.emus) {
       sound.mus.pause();
+      sound.emus = false;
+    } else {
+      sound.emus = true;
     }
   }
 
@@ -754,17 +756,6 @@ function keyFight(){
     break;
   }
 
-}
-
-document.onmousedown = function(event) {
-  a = Math.round(window.innerWidth/2-((xmax/2)*e));
-  xs = Math.round((event.clientX-a)/e);
-  ys = Math.round(event.clientY/e);
-  xm = event.clientX;
-  ym = event.clientY;
-
-
-  xx = rposX(xs);
 }
 
 //-----------------------------------------------------
@@ -1166,8 +1157,8 @@ function uptdateMap() {
   ctx.fillStyle = 'rgb(220,220,220)';
   ctx.textAlign = 'left';
 
-  fillTextM('* Vous devez appuyer sur [z] pour passer les dialogues.', 9, 60);
-  fillTextM('* Vous devez appuyer sur [m] pour couper la musique.', 9, 90);
+  fillTextM('* Vous devez appuyer sur [Z] pour passer les dialogues.', 9, 60);
+  fillTextM('* Vous devez appuyer sur [M] pour couper la musique.', 9, 90);
   fillTextM("* Lorsque vous attaquez, vous devez viser le centre de l'image /  pour infliger un maximum de dégats à votre adversaire.", 9, 120);
 
   ctx.drawImage(heart.img, 300, 170, heart.w, heart.h);
