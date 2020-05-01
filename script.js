@@ -18,19 +18,19 @@ imgt.src = 'Image/Sprite/test.png';
 var sound = {
   mus : new Howl({src: 'son/musique.mp3'}),
 
-  atk : new Howl({src: 'son/snd_laz.wav'}),
-  deg : new Howl({src: 'son/snd_damage.wav'}),
-  aie : new Howl({src: 'son/snd_hurt1.wav'}),
-  sel : new Howl({src: 'son/snd_squeak.wav'}),
-  val : new Howl({src: 'son/snd_select.wav'}),
-  brk : new Howl({src: 'son/snd_break1.wav'}),
-  bkk : new Howl({src: 'son/snd_break2.wav'}),
+  atk : new Howl({src: 'Son/snd_laz.wav'}),
+  deg : new Howl({src: 'Son/snd_damage.wav'}),
+  aie : new Howl({src: 'Son/snd_hurt1.wav'}),
+  sel : new Howl({src: 'Son/snd_squeak.wav'}),
+  val : new Howl({src: 'Son/snd_select.wav'}),
+  brk : new Howl({src: 'Son/snd_break1.wav'}),
+  bkk : new Howl({src: 'Son/snd_break2.wav'}),
 
-  vo1 : new Howl({src: 'son/voice1.mp3'}),
-  sil : new Howl({src: 'son/silence.mp3'}),
-  vo2 : new Howl({src: 'son/voice2.mp3'}),
+  vo1 : new Howl({src: 'Son/voice1.mp3'}),
+  sil : new Howl({src: 'Son/silence.mp3'}),
+  vo2 : new Howl({src: 'Son/voice2.mp3'}),
 
-  end : new Howl({src: 'son/snd_vaporized.wav'}),
+  end : new Howl({src: 'Son/snd_vaporized.wav'}),
 };
 
 
