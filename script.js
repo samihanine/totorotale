@@ -16,7 +16,7 @@ var imgt = new Image();
 imgt.src = 'Image/Sprite/test.png';
 
 var sound = {
-  mus : new Howl({src: 'son/musique.mp3'}),
+  mus : new Howl({src: 'Son/musique.mp3'}),
 
   atk : new Howl({src: 'Son/snd_laz.wav'}),
   deg : new Howl({src: 'Son/snd_damage.wav'}),
