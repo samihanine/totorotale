@@ -383,7 +383,7 @@ function uptdateFight() {
 
   if (!sound.mus.playing() && sound.emus == true) {
     sound.mus.play();
-    sound.mus.volume(0.5);
+    sound.mus.volume(0.4);
   }
 
   //iu
