@@ -3,6 +3,8 @@ let canvas = document.getElementById('c1');
 let ctx = canvas.getContext('2d');
 window.onload = create;
 
+console.log('v.1.02');
+
 var img = new Image();
 img.src = 'Image/Interface/sprite.png';
 
@@ -15,8 +17,9 @@ img1.src = 'Image/Sprite/atk.png';
 var imgt = new Image();
 imgt.src = 'Image/Sprite/test.png';
 
+
 var sound = {
-  mus : new Howl({src: 'Son/musique.mp3'}),
+  mus : new Audio('Son/musique.mp3'),
   emus : true,
 
   atk : new Howl({src: 'Son/snd_laz.wav'}),
@@ -381,9 +384,9 @@ function iniFight() {
 
 function uptdateFight() {
 
-  if (!sound.mus.playing() && sound.emus == true) {
+  if (sound.mus.paused && sound.emus == true) {
     sound.mus.play();
-    sound.mus.volume(0.5);
+    sound.mus.volume = 0.4;
   }
 
   //iu
