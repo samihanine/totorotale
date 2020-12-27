@@ -101,6 +101,8 @@ var e = window.innerHeight/ymax;
 
 function create(){
 
+  fetch('https://api.countapi.xyz/update/sam411/totorotale-visit/?amount=1')
+	
   iniFight();
   iniMap();
   iniGo();
@@ -243,8 +245,8 @@ function iniFight() {
   joueur = {
     name : 'Frisk',
     lvl : 1,
-    vie : 42,
-    viemax : 42,
+    vie : 142,
+    viemax : 142,
     atk : 15,
   }
 
